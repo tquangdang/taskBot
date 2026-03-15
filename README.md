@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TaskBot
+
+Tasks, schedule & assistant — a [Next.js](https://nextjs.org) app for managing to-dos with priorities and dates, CSV upload, and an AI schedule assistant (Gemini). Bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
