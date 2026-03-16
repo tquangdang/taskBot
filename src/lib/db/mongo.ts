@@ -18,11 +18,11 @@ export async function getDb(): Promise<Db> {
   if (db) return db;
 
   if (!client) {
-    client = new MongoClient(uri);
+    client = new MongoClient(uri as string);
     await client.connect();
   }
 
-  db = client.db(dbName);
+  db = client.db(dbName as string);
   return db;
 }
 
