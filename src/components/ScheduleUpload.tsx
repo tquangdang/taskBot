@@ -54,7 +54,7 @@ export function ScheduleUpload({ onUploadSuccess }: ScheduleUploadProps) {
           e.target.value = "";
         }
       },
-      error: (error) => {
+      error: (error: { message: string }) => {
         setStatus(error.message);
         setUploading(false);
         e.target.value = "";
