@@ -30,9 +30,9 @@ export function ScheduleUpload({ onUploadSuccess }: ScheduleUploadProps) {
     Papa.parse(file, {
       header: true,
       skipEmptyLines: true,
-      complete: async (results) => {
+      complete: async (results: { data: CsvRow[] | undefined }) => {
         try {
-          const rows = (results.data ?? []) as CsvRow[];
+          const rows = results.data ?? [];
           const res = await authedFetch("/api/schedule", {
             method: "POST",
             body: JSON.stringify(rows),
