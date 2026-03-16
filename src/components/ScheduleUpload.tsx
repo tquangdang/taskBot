@@ -27,12 +27,12 @@ export function ScheduleUpload({ onUploadSuccess }: ScheduleUploadProps) {
     setStatus(null);
     setUploading(true);
 
-    Papa.parse<CsvRow>(file, {
+    Papa.parse(file, {
       header: true,
       skipEmptyLines: true,
       complete: async (results) => {
         try {
-          const rows = results.data ?? [];
+          const rows = (results.data ?? []) as CsvRow[];
           const res = await authedFetch("/api/schedule", {
             method: "POST",
             body: JSON.stringify(rows),
