@@ -13,7 +13,8 @@ export type DayOfWeek =
 
 export interface ScheduleEntry {
   _id?: string;
-  userId: string;
+  id?: string;
+  userId?: string;
   courseName: string;
   dayOfWeek: DayOfWeek;
   startTime: string; // "HH:mm" 24h
